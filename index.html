@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👑 ملكة الفيديو شات | ابدئي رحلتك الآن</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* الهيدر */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .logo i {
+            color: #FFD700;
+            text-shadow: 0 0 20px #FFD700;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        
+        .earnings-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #FF6B6B, #FFD700);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            margin: 10px 0;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        /* قسم البداية */
+        .hero-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .hero-title {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #FFD700;
+        }
+        
+        .hero-text {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+        
+        /* زر البداية الرئيسي */
+        .main-btn {
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            margin: 10px 0;
+            font-weight: 700;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+        }
+        
+        .main-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* زر الشرح التفصيلي */
+        .guide-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin: 15px 0;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .guide-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+        
+        /* قسم التحفيز */
+        .motivation-section {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .motivation-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #FFD700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .motivation-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+        }
+        
+        .motivation-item i {
+            color: #4ECDC4;
+            font-size: 1.3rem;
+        }
+        
+        /* قسم المميزات */
+        .features-section {
+            margin-bottom: 30px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #FF6B6B;
+        }
+        
+        /* قسم طرق السحب */
+        .payment-section {
+            margin-bottom: 30px;
+        }
+        
+        .payment-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #FFD700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .payment-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .payment-icon {
+            background: rgba(255, 255, 255, 0.15);
+            width: 70px;
+            height: 70px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            transition: all 0.3s;
+        }
+        
+        .payment-icon:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.25);
+        }
+        
+        .payment-name {
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+        
+        /* قسم الكود */
+        .code-section {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 30px;
+            border: 2px solid #FFD700;
+        }
+        
+        .code-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #FFD700;
+        }
+        
+        .code-display {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 12px;
+            margin: 20px 0;
+            font-family: monospace;
+            color: #FFD700;
+        }
+        
+        .copy-btn {
+            background: #4ECDC4;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .copy-btn:hover {
+            background: #45b7aa;
+            transform: translateY(-3px);
+        }
+        
+        /* التذكير */
+        .reminder {
+            background: rgba(255, 215, 0, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            text-align: center;
+        }
+        
+        /* الأزرار العائمة */
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            z-index: 1000;
+        }
+        
+        .floating-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .floating-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* بوابة التحميل */
+        .download-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 25px;
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            border: 3px solid #FFD700;
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
+        }
+        
+        .countdown {
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 20px 0;
+            color: #FFD700;
+            font-family: monospace;
+        }
+        
+        /* نافذة الشرح التفصيلي */
+        .guide-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.95);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .guide-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 25px;
+            padding: 30px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            border: 3px solid #FFD700;
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
+        }
+        
+        .guide-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .guide-step {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #FFD700;
+            color: #333;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            margin-left: 10px;
+        }
+        
+        .step-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #FFD700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .step-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 15px;
+            margin: 15px auto;
+            display: block;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hosts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .host-image {
+            width: 100%;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .close-guide-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        
+        .close-guide-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+        
+        /* الفوتر */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* التجاوب */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 1.6rem;
+            }
+            
+            .main-btn, .guide-btn {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .payment-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .code-display {
+                font-size: 2rem;
+                letter-spacing: 3px;
+            }
+            
+            .floating-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .floating-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .guide-content {
+                padding: 20px;
+            }
+            
+            .step-title {
+                font-size: 1.2rem;
+            }
+            
+            .hosts-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            .logo {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- الهيدر -->
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-crown"></i>
+                <span>ملكة الفيديو شات</span>
+            </div>
+            <div class="tagline">كل كلمة تقولينها = نقود في جيبك 💰</div>
+            <div class="earnings-badge">
+                ⚡ يمكنك ربح 10 إلى 15 دولار في الساعة الواحدة
+            </div>
+        </div>
+        
+        <!-- قسم البداية -->
+        <div class="hero-section">
+            <h1 class="hero-title">حلمك يبدأ من هنا 👑</h1>
+            <p class="hero-text">
+                راحتك أولاً! الظهور بدون وجه عادي جداً 💫
+                <br>
+                اربحي من بيتك، ساعتين يومياً تكفي 💸
+            </p>
+            
+            <button class="main-btn" id="startBtn">
+                <i class="fas fa-play-circle"></i>
+                ابدئي الآن مجاناً
+            </button>
+            
+            <br>
+            
+            <button class="guide-btn" id="guideBtn">
+                <i class="fas fa-book-open"></i>
+                شرح كامل خطوة بخطوة
+            </button>
+        </div>
+        
+        <!-- قسم التحفيز -->
+        <div class="motivation-section">
+            <h2 class="motivation-title">
+                <i class="fas fa-bullhorn"></i>
+                اسمعي كلامنا.. راح تنجحي!
+            </h2>
+            
+            <div class="motivation-item">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <strong>أول أسبوع:</strong> اتعرفي على التطبيق، خذي راحتك، ما فيه ضغط
+                </div>
+            </div>
+            
+            <div class="motivation-item">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <strong>أسبوعين:</strong> بتلاقي نفسك مرتاحة وبتعرفي كيف تكسبي
+                </div>
+            </div>
+            
+            <div class="motivation-item">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <strong>شهر:</strong> بتكوني محترفة وتحققي دخل حلو وثابت
+                </div>
+            </div>
+            
+            <div class="reminder">
+                <i class="fas fa-lightbulb"></i>
+                <strong>تذكّرِي:</strong> كل البنات الي نجحوا كانوا مكانك.. وقرروا يبدون!
+            </div>
+        </div>
+        
+        <!-- قسم المميزات -->
+        <div class="features-section">
+            <h2 class="motivation-title">
+                <i class="fas fa-star"></i>
+                ليه كل البنات بيحبوا التطبيق؟
+            </h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>خصوصية كاملة</h3>
+                    <p>تستطيعي الظهور كما تحبين، بدون قيود</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>سحب فوري</h3>
+                    <p>خلي فلوسك في حسابك بأسرع وقت</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>دعم فني دائم</h3>
+                    <p>نقف معاكي خطوة بخطوة</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- قسم طرق السحب -->
+        <div class="payment-section">
+            <h2 class="payment-title">
+                <i class="fas fa-wallet"></i>
+                خلي فلوسك تجيك بأي طريقة
+            </h2>
+            
+            <div class="payment-icons">
+                <div class="payment-icon">
+                    <i class="fas fa-bolt"></i>
+                    <div class="payment-name">فوري</div>
+                </div>
+                
+                <div class="payment-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div class="payment-name">فودافون</div>
+                </div>
+                
+                <div class="payment-icon">
+                    <i class="fab fa-paypal"></i>
+                    <div class="payment-name">PayPal</div>
+                </div>
+                
+                <div class="payment-icon">
+                    <i class="fas fa-credit-card"></i>
+                    <div class="payment-name">بايونير</div>
+                </div>
+                
+                <div class="payment-icon">
+                    <i class="fas fa-money-bill"></i>
+                    <div class="payment-name">شام كاش</div>
+                </div>
+                
+                <div class="payment-icon">
+                    <i class="fas fa-university"></i>
+                    <div class="payment-name">بنكي</div>
+                </div>
+            </div>
+            
+            <div class="reminder">
+                <i class="fas fa-info-circle"></i>
+                <strong>بدون عمولات خفية | السحب فوري | الحد الأدنى 10$ فقط</strong>
+            </div>
+        </div>
+        
+        <!-- قسم الكود -->
+        <div class="code-section">
+            <h2 class="code-title">
+                <i class="fas fa-key"></i>
+                الكود السري علشان تنجحي
+            </h2>
+            
+            <p>هذا الكود مهم جداً علشان:</p>
+            <p style="margin: 10px 0; opacity: 0.9;">
+                • نعرفك ونساعدك<br>
+                • نتابع تقدمك<br>
+                • نعطيك مكافآت<br>
+                • نضمن لك دعم فني
+            </p>
+            
+            <div class="code-display">S4593D</div>
+            
+            <button class="copy-btn" id="copyCodeBtn">
+                <i class="fas fa-copy"></i>
+                انسخ الكود
+            </button>
+            
+            <p style="margin-top: 15px; font-size: 0.9rem;">
+                <i class="fas fa-lightbulb"></i>
+                خليه في المذكرات أو صورته
+            </p>
+        </div>
+        
+        <!-- الفوتر -->
+        <div class="footer">
+            <p>© 2024 ملكة الفيديو شات | تطبيق آمن ومضمون للبنات فقط</p>
+            <p style="font-size: 0.8rem; margin-top: 5px;">للأعمار 18+ | خصوصية كاملة | دعم فني متواصل</p>
+        </div>
+    </div>
+    
+    <!-- الأزرار العائمة -->
+    <div class="floating-buttons">
+        <a href="https://t.me/Te65o?text=مرحبا%20أحتاج%20دعم%20فني" target="_blank" class="floating-btn">
+            <i class="fab fa-telegram"></i>
+            الدعم الفني
+        </a>
+        
+        <button class="floating-btn" id="downloadBtn">
+            <i class="fas fa-download"></i>
+            حمل التطبيق
+        </button>
+    </div>
+    
+    <!-- بوابة التحميل -->
+    <div class="download-modal" id="downloadModal">
+        <div class="modal-content">
+            <h2 style="margin-bottom: 20px;">
+                <i class="fas fa-rocket"></i>
+                جاهزة للانطلاق؟
+            </h2>
+            
+            <p>خلال 10 ثواني راح تتحول صفحتك للتطبيق</p>
+            
+            <div class="countdown" id="countdown">10</div>
+            
+            <div class="code-display" style="font-size: 1.8rem; margin: 15px 0;">S4593D</div>
+            
+            <p style="margin-bottom: 20px;">
+                <i class="fas fa-exclamation-circle"></i>
+                <strong>خلي الكود جنبك!</strong><br>
+                هويتك في التطبيق ومفتاح دعمك
+            </p>
+            
+            <button class="main-btn" id="copyCodeModalBtn" style="margin-bottom: 15px;">
+                <i class="fas fa-copy"></i>
+                انسخ الكود أولاً
+            </button>
+        </div>
+    </div>
+    
+    <!-- نافذة الشرح التفصيلي -->
+    <div class="guide-modal" id="guideModal">
+        <button class="close-guide-btn" id="closeGuideBtn">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <div class="guide-content">
+            <div class="guide-header">
+                <h1 style="color: #FFD700; margin-bottom: 10px;">
+                    <i class="fas fa-graduation-cap"></i>
+                    شرح كامل خطوة بخطوة
+                </h1>
+                <p>كل ما تحتاجين معرفته للبدء والنجاح معنا</p>
+            </div>
+            
+            <div class="guide-step">
+                <div class="step-number">1</div>
+                <h2 class="step-title">
+                    <i class="fas fa-download"></i>
+                    التحميل والتسجيل
+                </h2>
+                <p><strong>بعد تحميل التطبيق:</strong></p>
+                <p>• سجلي باسمك وتاريخ ميلادك (يجب أن يكون سنك أكبر من 18 عام)</p>
+                <p>• سجلي بحساب جوجل - هذا أفضل وأضمن لك</p>
+            </div>
+            
+            <div class="guide-step">
+                <div class="step-number">2</div>
+                <h2 class="step-title">
+                    <i class="fas fa-key"></i>
+                    الخطوة الأهم: وضع الكود
+                </h2>
+                <p>ضعي الكود <strong>S4593D</strong> في المكان المناسب داخل التطبيق</p>
+                <p style="color: #FFD700; font-weight: 600;">✓ هذا الكود يضمن لك:</p>
+                <p>• الحصول على الدعم الفني<br>
+                   • المكافآت والإهداءات منا<br>
+                   • حل أي مشكلة تواجهك<br>
+                   • متابعتك خطوة بخطوة</p>
+                <img src="https://i.ibb.co/h1B4hcLQ/IMG-20260122-021527-970.jpg" alt="مكان وضع الكود" class="step-image">
+            </div>
+            
+            <div class="guide-step">
+                <div class="step-number">3</div>
+                <h2 class="step-title">
+                    <i class="fas fa-user-check"></i>
+                    خطوة المصادقة (مهم جداً ولا تقلقي)
+                </h2>
+                <p><strong>تذكري:</strong> لا أحد يرى وجهك نهائياً!</p>
+                <p>• فقط الذكاء الاصطناعي يتأكد من أنك بنت</p>
+                <p>• الخطوة الأولى: اعملي المصادقة بوجهك (الذكاء الاصطناعي فقط)</p>
+                <p>• الخطوة الثانية: ضعي أي صورة من جوجل تكون جميلة</p>
+                <p style="color: #4ECDC4; font-weight: 600;">أو صورة لك بالذكاء الاصطناعي تكفي بالغرض</p>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin: 20px 0;">
+                    <img src="https://i.ibb.co/wNf7pkVn/IMG-20260122-021613-747.jpg" alt="خطوات المصادقة" class="step-image" style="max-width: 300px;">
+                </div>
+            </div>
+            
+            <div class="guide-step">
+                <div class="step-number">4</div>
+                <h2 class="step-title">
+                    <i class="fas fa-check-circle"></i>
+                    أنتِ الآن جاهزة للعمل!
+                </h2>
+                <p>إذا أردتي دعم أو مساعدة:</p>
+                <p>• يمكنك التواصل في الجروب الذي سوف تدخلين به تلقائياً بعد التسجيل بالكود</p>
+                <p>• أو يمكنك الضغط على أيقونة التليجرام مباشرة من التطبيق</p>
+            </div>
+            
+            <div class="guide-step">
+                <div class="step-number">5</div>
+                <h2 class="step-title">
+                    <i class="fas fa-chart-line"></i>
+                    رفع سعر الدقيقة
+                </h2>
+                <p>يمكنك أيضاً التحكم في سعر دقيقة المكالمة مع كل مستوى (Level)</p>
+                <img src="https://i.ibb.co/7xcK0jzy/IMG-20260122-022752-652.jpg" alt="رفع سعر الدقيقة" class="step-image">
+            </div>
+            
+            <div class="guide-step">
+                <div class="step-number">6</div>
+                <h2 class="step-title">
+                    <i class="fas fa-trophy"></i>
+                    النتائج الحقيقية
+                </h2>
+                <p>هذه صورة من داخل حساب إحدى المضيفات المميزات - هذا نتيجة عملها ساعتين فقط!</p>
+                <img src="https://i.ibb.co/fdn4CXNC/IMG-20260122-021634-917.jpg" alt="نتيجة عمل ساعتين" class="step-image">
+            </div>
+            
+            <div class="guide-step">
+                <div class="step-number">7</div>
+                <h2 class="step-title">
+                    <i class="fas fa-users"></i>
+                    بعض البنات المضيفات التي تعمل معنا
+                </h2>
+                <div class="hosts-grid">
+                    <img src="https://i.ibb.co/HTPcpvLR/Screenshot-2026-01-21-23-15-48-17.png" alt="مضيفة 1" class="host-image">
+                </div>
+            </div>
+            
+            <div class="guide-step">
+                <div class="step-number">8</div>
+                <h2 class="step-title">
+                    <i class="fas fa-lightbulb"></i>
+                    نصائح للنجاح
+                </h2>
+                <p><strong>العمل يعتمد على:</strong></p>
+                <p>• لباقتك في الكلام وأسلوبك الجميل</p>
+                <p>• الصور الجميلة التي سوف تضعينها</p>
+                <p>• النقاب يعطيك مكافآت على كل Target تحققينه</p>
+                
+                <div class="reminder" style="margin-top: 20px;">
+                    <p><strong>معلومة مهمة:</strong> السحب لا يرتبط بالمكافآت أو الـ Target</p>
+                    <p>يمكنك السحب في أي وقت بنفسك بداية من مبلغ 1000 توينكس (يعادل 10 دولارات)</p>
+                </div>
+            </div>
+            
+            <div class="guide-step">
+                <div class="step-number">9</div>
+                <h2 class="step-title">
+                    <i class="fas fa-crown"></i>
+                    كلمة أخيرة
+                </h2>
+                <p style="text-align: center; font-size: 1.2rem; padding: 20px; background: rgba(255, 215, 0, 0.1); border-radius: 15px;">
+                    <strong>إذا كنتِ مضيفة وتريدين العمل فعلاً والمكسب..</strong><br>
+                    <span style="color: #FFD700;">أنتِ معنا في المكان الصحيح! 💖👑</span>
+                </p>
+            </div>
+            
+            <button class="main-btn" style="margin: 30px auto 10px; display: block;" id="startFromGuideBtn">
+                <i class="fas fa-play-circle"></i>
+                ابدئي رحلتك الآن
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // عناصر الصفحة
+        const startBtn = document.getElementById('startBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const guideBtn = document.getElementById('guideBtn');
+        const closeGuideBtn = document.getElementById('closeGuideBtn');
+        const startFromGuideBtn = document.getElementById('startFromGuideBtn');
+        const downloadModal = document.getElementById('downloadModal');
+        const guideModal = document.getElementById('guideModal');
+        const countdownElement = document.getElementById('countdown');
+        const copyCodeBtn = document.getElementById('copyCodeBtn');
+        const copyCodeModalBtn = document.getElementById('copyCodeModalBtn');
+        
+        // رابط التحميل
+        const downloadUrl = 'https://web.chatolive.net/new/share.html?gender=1&code=S4593D&af_code=&user_id=157722118&countryCode=EG&bundleId=com.chato.amigo&appName=Chato&appStore=https%3A%2F%2Fapps.apple.com%2Fapp%2Fid1590508975';
+        
+        // فتح بوابة التحميل
+        function openDownloadModal() {
+            downloadModal.style.display = 'flex';
+            
+            // بدء العد التنازلي
+            let countdown = 10;
+            countdownElement.textContent = countdown;
+            
+            const countdownInterval = setInterval(() => {
+                countdown--;
+                countdownElement.textContent = countdown;
+                
+                // تغيير اللون عند اقتراب النهاية
+                if (countdown <= 3) {
+                    countdownElement.style.color = '#FF6B6B';
+                }
+                
+                if (countdown === 0) {
+                    clearInterval(countdownInterval);
+                    countdownElement.textContent = '🚀';
+                    
+                    // الانتقال للرابط بعد 1.5 ثانية
+                    setTimeout(() => {
+                        window.location.href = downloadUrl;
+                    }, 1500);
+                }
+            }, 1000);
+        }
+        
+        // فتح نافذة الشرح
+        function openGuideModal() {
+            guideModal.style.display = 'flex';
+        }
+        
+        // إغلاق نافذة الشرح
+        function closeGuideModal() {
+            guideModal.style.display = 'none';
+        }
+        
+        // نسخ الكود
+        function copyCode() {
+            const code = "S4593D";
+            navigator.clipboard.writeText(code).then(() => {
+                // تغيير نص الزر مؤقتاً
+                const originalText = copyCodeBtn.innerHTML;
+                copyCodeBtn.innerHTML = '<i class="fas fa-check"></i> تم النسخ!';
+                copyCodeBtn.style.background = '#45b7aa';
+                
+                // إذا كان في المودال
+                if (copyCodeModalBtn) {
+                    const originalModalText = copyCodeModalBtn.innerHTML;
+                    copyCodeModalBtn.innerHTML = '<i class="fas fa-check"></i> تم النسخ!';
+                    copyCodeModalBtn.style.background = '#45b7aa';
+                    
+                    setTimeout(() => {
+                        copyCodeModalBtn.innerHTML = originalModalText;
+                        copyCodeModalBtn.style.background = '';
+                    }, 2000);
+                }
+                
+                setTimeout(() => {
+                    copyCodeBtn.innerHTML = originalText;
+                    copyCodeBtn.style.background = '';
+                }, 2000);
+                
+                // تأثير بسيط
+                const codeDisplay = document.querySelector('.code-display');
+                codeDisplay.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    codeDisplay.style.transform = 'scale(1)';
+                }, 300);
+                
+            }).catch(err => {
+                alert('يرجى نسخ الكود يدوياً: ' + code);
+            });
+        }
+        
+        // أحداث النقر
+        startBtn.addEventListener('click', openDownloadModal);
+        downloadBtn.addEventListener('click', openDownloadModal);
+        guideBtn.addEventListener('click', openGuideModal);
+        closeGuideBtn.addEventListener('click', closeGuideModal);
+        startFromGuideBtn.addEventListener('click', openDownloadModal);
+        copyCodeBtn.addEventListener('click', copyCode);
+        copyCodeModalBtn.addEventListener('click', copyCode);
+        
+        // إغلاق المودال عند النقر خارج المحتوى
+        downloadModal.addEventListener('click', function(e) {
+            if (e.target === downloadModal) {
+                downloadModal.style.display = 'none';
+            }
+        });
+        
+        guideModal.addEventListener('click', function(e) {
+            if (e.target === guideModal) {
+                closeGuideModal();
+            }
+        });
+        
+        // إغلاق بالزر ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                downloadModal.style.display = 'none';
+                closeGuideModal();
+            }
+        });
+        
+        // رسالة ترحيبية عند فتح الصفحة
+        window.addEventListener('load', function() {
+            console.log('👑 مرحباً بك في عالم ملكة الفيديو شات!');
+        });
+    </script>
+</body>
+</html>
